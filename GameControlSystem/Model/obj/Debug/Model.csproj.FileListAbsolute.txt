@@ -1,0 +1,12 @@
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\Model.dll.config
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\Model.dll
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\Model.pdb
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\EntityFramework.dll
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\EntityFramework.xml
+C:\projetos\testecsharp\testeControleJogos\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\projetos\testecsharp\testeControleJogos\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\projetos\testecsharp\testeControleJogos\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\projetos\testecsharp\testeControleJogos\Model\obj\Debug\Model.csproj.CopyComplete
+C:\projetos\testecsharp\testeControleJogos\Model\obj\Debug\Model.dll
+C:\projetos\testecsharp\testeControleJogos\Model\obj\Debug\Model.pdb

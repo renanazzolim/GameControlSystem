@@ -11,15 +11,15 @@ namespace Model {
     public class Endereco {
 
         [Key]
-        public int EnderecoId { get; set; }
+        private int EnderecoId { get; set; }
 
-        public String Logradouro { get; set; }
+        private String Logradouro { get; set; }
 
-        public int Numero { get; set; }
+        private int Numero { get; set; }
 
-        public String Complemento { get; set; }
+        private String Complemento { get; set; }
 
-        public String Bairro { get; set; }
+        private String Bairro { get; set; }
 
     }
 }

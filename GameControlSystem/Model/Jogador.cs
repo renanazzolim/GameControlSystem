@@ -9,17 +9,17 @@ namespace Model {
     public class Jogador {
 
         [Key]
-        public int JogadorId { get; set; }
+        private int JogadorId { get; set; }
 
-        public String Nome { get; set; }
+        private String Nome { get; set; }
 
-        public DateTime Nascimento { get; set; }
+        private DateTime Nascimento { get; set; }
 
-        public String Genero { get; set; }
+        private String Genero { get; set; }
 
-        public Double Altura { get; set; }
+        private Double Altura { get; set; }
 
-        public int TimeId { get; set; }
+        private int TimeId { get; set; }
 
         public virtual Time _Time { get; set; }
 

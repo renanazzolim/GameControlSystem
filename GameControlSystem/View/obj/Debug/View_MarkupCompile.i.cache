@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\projetos\testecsharp\testeControleJogos\View\obj\Debug\
+C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\
 View
 none
 false
 DEBUG;TRACE
-C:\projetos\testecsharp\testeControleJogos\View\App.xaml
-2-454054922
+C:\projetos\GameControlSystem\GameControlSystem\View\App.xaml
+2-1464122015
 
-10-1850305581
-18899427361
-MainWindow.xaml;Telas\Cadastrar.xaml;
+10-1049532379
+20-1706978471
+MainWindow.xaml;Telas\CadastrarTime.xaml;
 
 True
 

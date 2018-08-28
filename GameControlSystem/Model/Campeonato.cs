@@ -11,9 +11,9 @@ namespace Model {
     public class Campeonato {
 
         [Key]
-        public int CampeonatoId { get; set; }
+        private int CampeonatoId { get; set; }
 
-        public int AnoCampeonato { get; set; }
+        private int AnoCampeonato { get; set; }
 
     }
 }

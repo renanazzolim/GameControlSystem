@@ -47,8 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CampeonatoController.cs" />
     <Compile Include="EnderecoController.cs" />
+    <Compile Include="EstadioController.cs" />
+    <Compile Include="GolController.cs" />
+    <Compile Include="JogadorController.cs" />
+    <Compile Include="PartidaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

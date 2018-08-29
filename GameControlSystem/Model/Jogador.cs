@@ -19,6 +19,8 @@ namespace Model {
 
         private Double Altura { get; set; }
 
+        private Boolean Capitao { get; set; }
+
         private int TimeId { get; set; }
 
         public virtual Time _Time { get; set; }

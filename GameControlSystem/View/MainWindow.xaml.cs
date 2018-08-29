@@ -23,25 +23,53 @@ namespace View {
             InitializeComponent();
         }
 
-        private void Teste_Click(object sender, RoutedEventArgs e) {
-            this.Hide();
-            Cadastrar cad = new Cadastrar();
-            cad.Closed += (s, args) => this.Close();
-            cad.Show();
-        }
-
-        private void ButtonPopUpClose_Click(object sender, RoutedEventArgs e) {
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e) {
             Application.Current.Shutdown();
         }
 
-        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e) {
-            ButtonOpenMenu.Visibility = Visibility.Visible;
-            ButtonCloseMenu.Visibility = Visibility.Collapsed;
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e) {
+            DragMove();
         }
 
-        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e) {
-            ButtonOpenMenu.Visibility = Visibility.Collapsed;
-            ButtonCloseMenu.Visibility = Visibility.Visible;
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            int index = ListViewMenu.SelectedIndex;
+            MoveCursorMenu(index);
+
+            switch(index) {
+                case 0:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new scnInicio());
+                    break;
+                case 1:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new scnPartida());
+                    break;
+                case 2:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new scnJogador());
+                    break;
+                case 3:
+                    GridPrincipal.Children.Clear();
+                   GridPrincipal.Children.Add(new scnTime());
+                    break;
+                case 4:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new scnCampeonato());
+                    break;
+                case 5:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new scnRelatorios());
+                    break;
+                default:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new scnInicio());
+                    break;
+            }
+        }
+
+        private void MoveCursorMenu(int index) {
+            TransitioningContentSlide.OnApplyTemplate();
+            GridCursor.Margin = new Thickness(0, (100 + (60 * index)), 0, 0);
         }
     }
 }

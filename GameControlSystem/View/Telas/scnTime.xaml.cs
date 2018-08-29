@@ -1,6 +1,4 @@
-﻿using Controller;
-using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace View.Telas {
     /// <summary>
-    /// Lógica interna para Cadastrar.xaml
+    /// Interação lógica para scnTime.xam
     /// </summary>
-    public partial class Cadastrar : Window {
-        public Cadastrar() {
+    public partial class scnTime : UserControl {
+        public scnTime() {
             InitializeComponent();
         }
     }

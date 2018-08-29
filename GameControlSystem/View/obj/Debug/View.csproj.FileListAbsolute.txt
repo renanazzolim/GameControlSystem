@@ -41,12 +41,10 @@ C:\projetos\GameControlSystem\GameControlSystem\View\bin\Debug\EntityFramework.x
 C:\projetos\GameControlSystem\GameControlSystem\View\bin\Debug\EntityFramework.SqlServer.xml
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\View.csprojAssemblyReference.cache
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\MainWindow.g.cs
-C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\CadastrarTime.g.cs
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\App.g.cs
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\View_MarkupCompile.cache
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\View_MarkupCompile.lref
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\MainWindow.baml
-C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\CadastrarTime.baml
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\View.g.resources
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\View.Properties.Resources.resources
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\View.csproj.GenerateResource.cache
@@ -59,3 +57,7 @@ C:\projetos\GameControlSystem\GameControlSystem\View\bin\Debug\MaterialDesignThe
 C:\projetos\GameControlSystem\GameControlSystem\View\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\projetos\GameControlSystem\GameControlSystem\View\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\App.baml
+C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\frmCadastrarTime.g.cs
+C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\frmCadastrarTime.baml
+C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\Inicio.g.cs
+C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\Inicio.baml

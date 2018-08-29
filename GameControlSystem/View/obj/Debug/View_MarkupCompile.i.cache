@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\projetos\GameControlSystem\GameControlSystem\View\App.xaml
-2-1464122015
+7264911938
 
-10-1049532379
+15221839382
 20-1706978471
-MainWindow.xaml;Telas\CadastrarTime.xaml;
+MainWindow.xaml;Telas\scnCampeonato.xaml;Telas\scnInicio.xaml;Telas\scnJogador.xaml;Telas\scnPartida.xaml;Telas\scnRelatorios.xaml;Telas\scnTime.xaml;
 
-True
+False
 

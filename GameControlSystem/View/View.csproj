@@ -67,8 +67,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Telas\CadastrarTime.xaml.cs">
-      <DependentUpon>CadastrarTime.xaml</DependentUpon>
+    <Compile Include="Telas\scnCampeonato.xaml.cs">
+      <DependentUpon>scnCampeonato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnInicio.xaml.cs">
+      <DependentUpon>scnInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnJogador.xaml.cs">
+      <DependentUpon>scnJogador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnPartida.xaml.cs">
+      <DependentUpon>scnPartida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnRelatorios.xaml.cs">
+      <DependentUpon>scnRelatorios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnTime.xaml.cs">
+      <DependentUpon>scnTime.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -82,7 +97,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Telas\CadastrarTime.xaml">
+    <Page Include="Telas\scnCampeonato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\scnInicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\scnJogador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\scnPartida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\scnRelatorios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\scnTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,6 +158,9 @@
       <Project>{C4ECC3E6-C1EC-40ED-955A-3C82B00DB074}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

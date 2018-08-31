@@ -11,22 +11,22 @@ namespace Model {
     public class Partida {
 
         [Key]
-        private int PartidaId { get; set; }
+        public int PartidaId { get; set; }
 
         [Required]
-        private DateTime Data { get; set; }
+        public DateTime Data { get; set; }
 
         [Required]
-        private int EstadioId { get; set; }
+        public int EstadioId { get; set; }
 
         [Required]
-        private int VisitanteId { get; set; }
+        public int VisitanteId { get; set; }
 
         [Required]
-        private int AnfitriaoId { get; set; }
+        public int AnfitriaoId { get; set; }
 
         [Required]
-        private int CampeonatoId { get; set; }
+        public int CampeonatoId { get; set; }
 
         public virtual Time _Time { get; set; }
 

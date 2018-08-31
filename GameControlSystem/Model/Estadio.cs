@@ -11,11 +11,11 @@ namespace Model {
     public class Estadio {
 
         [Key]
-        private int EstadioId { get; set; }
+        public int EstadioId { get; set; }
 
-        private String Nome { get; set; }
+        public String Nome { get; set; }
 
-        private int EnderecoId { get; set; }
+        public int EnderecoId { get; set; }
 
         public virtual Endereco _Endereco { get; set; }
 

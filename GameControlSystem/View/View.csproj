@@ -67,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Forms\frmCadastrarCampeonato.xaml.cs">
+      <DependentUpon>frmCadastrarCampeonato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\scnCampeonato.xaml.cs">
       <DependentUpon>scnCampeonato.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
     <Compile Include="Telas\scnTime.xaml.cs">
       <DependentUpon>scnTime.xaml</DependentUpon>
     </Compile>
+    <Page Include="Forms\frmCadastrarCampeonato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -159,8 +166,9 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Resource Include="Assets\speed-play-soccer.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

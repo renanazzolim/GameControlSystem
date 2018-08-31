@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using View.Forms;
 
 namespace View.Telas {
     /// <summary>
@@ -20,6 +21,11 @@ namespace View.Telas {
     public partial class scnInicio : UserControl {
         public scnInicio() {
             InitializeComponent();
+        }
+
+        private void btnCriarCampeonato_Click(object sender, RoutedEventArgs e) {
+            frmCadastrarCampeonato frm = new frmCadastrarCampeonato();
+            frm.Show();
         }
     }
 }

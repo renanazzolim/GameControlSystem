@@ -5,8 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:View.Telas"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="400" Width="500">
     <Grid>
-            
+        <Button x:Name="btnListarCampeonatos" Content="Listar" HorizontalAlignment="Left" Margin="480,-143,-66,0" VerticalAlignment="Top" Width="86"/>
+        <Label x:Name="lblTitulo" Content="Campeonatos" HorizontalAlignment="Left" Margin="121,-234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.461,-0.173" Width="161" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
+
     </Grid>
 </UserControl>

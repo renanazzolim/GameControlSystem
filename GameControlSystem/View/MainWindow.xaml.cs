@@ -21,6 +21,7 @@ namespace View {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+            GridPrincipal.Children.Add(new scnInicio());
         }
 
         private void ButtonFechar_Click(object sender, RoutedEventArgs e) {

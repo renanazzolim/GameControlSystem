@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -11,9 +12,22 @@ namespace Model {
     public class Campeonato {
 
         [Key]
-        private int CampeonatoId { get; set; }
+        public int CampeonatoId { get; set; }
 
-        private int AnoCampeonato { get; set; }
+        public int AnoCampeonato { get; set; }
+
+        public String TituloCampeonato { get; set; }
+
+        public static void Salvar(Campeonato obj) {
+            Contexto contexto = new Contexto();
+            contexto.Campeonatos.Add(obj);
+            contexto.SaveChanges();
+        }
+
+        public static List<Campeonato> ListarCampeonatos() {
+            Contexto contexto = new Contexto();
+            return contexto.Campeonatos.ToList();
+        }
 
     }
 }

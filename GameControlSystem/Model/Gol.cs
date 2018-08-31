@@ -11,13 +11,13 @@ namespace Model {
     public class Gol {
 
         [Key]
-        private int GolId { get; set; }
+        public int GolId { get; set; }
 
-        private int PartidaId { get; set; }
+        public int PartidaId { get; set; }
 
-        private int Quantidade { get; set; }
+        public int Quantidade { get; set; }
 
-        private int JogadorId { get; set; }
+        public int JogadorId { get; set; }
 
         public virtual Partida _Partida { get; set; }
 

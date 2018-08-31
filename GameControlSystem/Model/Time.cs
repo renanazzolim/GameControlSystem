@@ -9,17 +9,17 @@ namespace Model {
     [Table("TIME")]
     public class Time {
 
-        private int TimeId { get; set; }
+        public int TimeId { get; set; }
 
-        private String Nome { get; set; }
+        public String Nome { get; set; }
 
-        private int Vitorias { get; set; }
+        public int Vitorias { get; set; }
 
-        private int Derrotas { get; set; }
+        public int Derrotas { get; set; }
 
-        private int Empates { get; set; }
+        public int Empates { get; set; }
 
-        private int EstadioId { get; set; }
+        public int EstadioId { get; set; }
 
         public virtual Estadio _Estadio { get; set; }
 

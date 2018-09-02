@@ -9,10 +9,21 @@ using System.Threading.Tasks;
 namespace Controller {
     public class TimeController {
 
-        public void Salvar(Time obj) {
-            Contexto contexto = new Contexto();
-            contexto.Times.Add(obj);
-            contexto.SaveChanges();
+        public void SalvarTime(Time obj) {
+            try {
+                ValidarTime(obj);
+                Time.Salvar(obj);
+            } catch (Exception exp) {
+                throw new Exception(exp.Message);
+            }
+        }
+
+        private void ValidarTime(Time obj) {
+            foreach (Time time in Time.ListarTimes()) {
+                if (obj.Nome.Equals(time.Nome)) {
+                    throw new Exception("Time já existe, verifique");
+                }
+            }
         }
     }
 }

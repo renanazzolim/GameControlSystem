@@ -7,8 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" Width="500">
     <Grid>
-        <Button x:Name="btnListarCampeonatos" Content="Listar" HorizontalAlignment="Left" Margin="480,-143,-66,0" VerticalAlignment="Top" Width="86"/>
+        <Button x:Name="btnListarCampeonatos" Content="Listar" HorizontalAlignment="Left" Margin="494,-143,-80,0" VerticalAlignment="Top" Width="86" Click="btnListarCampeonatos_Click"/>
         <Label x:Name="lblTitulo" Content="Campeonatos" HorizontalAlignment="Left" Margin="121,-234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.461,-0.173" Width="161" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
+        <Button x:Name="btnEditarCampeonato" Content="Editar" HorizontalAlignment="Left" Margin="494,-92,-80,0" VerticalAlignment="Top" Width="86" Height="32" Click="btnEditarCampeonato_Click"/>
+        <Button x:Name="btnExcluirCampeonato" Content="Excluir" HorizontalAlignment="Left" Margin="494,-41,-80,0" VerticalAlignment="Top" Width="86" Click="btnExcluirCampeonato_Click"/>
 
     </Grid>
 </UserControl>

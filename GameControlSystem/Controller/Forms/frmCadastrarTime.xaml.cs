@@ -17,12 +17,10 @@ using System.Windows.Shapes;
 namespace View.Forms
 {
     /// <summary>
-    /// Lógica interna para frmCadastrarCampeonato.xaml
+    /// Lógica interna para frmCadastrarTime.xaml
     /// </summary>
-    public partial class frmCadastrarCampeonato : Window
-    {
-        public frmCadastrarCampeonato()
-        {
+    public partial class frmCadastrarTime : Window {
+        public frmCadastrarTime() {
             InitializeComponent();
         }
 
@@ -34,23 +32,21 @@ namespace View.Forms
             DragMove();
         }
 
-        private void btnCriar_Click(object sender, RoutedEventArgs e) {
+        private void btnConfirmar_Click(object sender, RoutedEventArgs e) {
+
             try {
+                Endereco end = new Endereco();
+                end.Logradouro = txtLogradouro.Text;
+                end.Numero = Convert.ToInt32(txtNumero);
+                end.Complemento = txtComplemento.Text;
+                end.Bairro = txtBairro.Text;
 
-                Campeonato campeonato = new Campeonato();
-                campeonato.AnoCampeonato = Convert.ToInt32(txtAno.Text);
-                campeonato.TituloCampeonato = txtTituloCamp.Text;
-
-                CampeonatoController campController = new CampeonatoController();
-                campController.SalvarCampeonato(campeonato);
-                MessageBox.Show("Cadastrado com sucesso!");
-                this.Close();
+                EnderecoController endController = new EnderecoController();
+                endController.SalvarEndereco(end);
             } catch (Exception exp) {
                 MessageBox.Show(exp.Message);
             }
             
         }
-
-        
     }
 }

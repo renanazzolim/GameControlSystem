@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -22,6 +23,23 @@ namespace Model {
         public int EstadioId { get; set; }
 
         public virtual Estadio _Estadio { get; set; }
+
+        public Time() {
+            this.Vitorias = 0;
+            this.Derrotas = 0;
+            this.Empates = 0;
+        }
+
+        public static void Salvar(Time obj) {
+            Contexto contexto = new Contexto();
+            contexto.Times.Add(obj);
+            contexto.SaveChanges();
+        }
+
+        public static List<Time> ListarTimes() {
+            Contexto contexto = new Contexto();
+            return contexto.Times.ToList();
+        }
 
     }
 }

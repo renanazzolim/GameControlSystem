@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,5 +22,17 @@ namespace Model {
 
         public String Bairro { get; set; }
 
+        public static void Salvar(Endereco obj) {
+            Contexto contexto = new Contexto();
+            contexto.Enderecos.Add(obj);
+            contexto.SaveChanges();
+        }
+
+        public static List<Endereco> ListarEnderecos() {
+            Contexto contexto = new Contexto();
+            return contexto.Enderecos.ToList();
+        }
+
     }
+
 }

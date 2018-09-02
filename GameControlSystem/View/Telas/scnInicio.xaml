@@ -25,7 +25,8 @@
     <Grid>
         <Button x:Name="btnCriarCampeonato" Content="Criar Campeonato" HorizontalAlignment="Left" Margin="429,-144,-83,0" VerticalAlignment="Top" Width="154" Click="btnCriarCampeonato_Click"/>
         <Label x:Name="lblTituloPrincipal" Content="Bem-vindo ao Controle de Campeonatos!" HorizontalAlignment="Left" Margin="15,-234,0,0" VerticalAlignment="Top" Width="460" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
-        
+        <Button x:Name="btnCriarTime" Content="Criar Time" Margin="429,-82,-83,0" VerticalAlignment="Top" Click="btnCriarTime_Click"/>
+
     </Grid>
 
 </UserControl>

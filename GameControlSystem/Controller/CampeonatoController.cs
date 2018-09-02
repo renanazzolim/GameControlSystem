@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Controller {
     public class CampeonatoController {
 
-        public static void SalvarCampeonato(Campeonato obj) {
+        public void SalvarCampeonato(Campeonato obj) {
             try {
                 validarInputs(obj.AnoCampeonato, obj.TituloCampeonato);
 
@@ -34,7 +34,7 @@ namespace Controller {
             return result;
         }
 
-        private static void validarInputs(int ano, string texto) {
+        private void validarInputs(int ano, string texto) {
             if ((ano < 2018 && ano > 2030) || ano.Equals("")) {
                 throw new Exception("Ano inválido");
             }

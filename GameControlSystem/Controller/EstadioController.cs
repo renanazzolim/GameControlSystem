@@ -9,10 +9,21 @@ using System.Threading.Tasks;
 namespace Controller {
     public class EstadioController {
 
-        public void Salvar(Estadio obj) {
-            Contexto contexto = new Contexto();
-            contexto.Estadios.Add(obj);
-            contexto.SaveChanges();
+        public void SalvarEstadio(Estadio obj) {
+            try {
+                ValidarEstadio(obj);
+                Estadio.Salvar(obj);
+            } catch (Exception exp) {
+                throw new Exception(exp.Message);
+            }            
+        }
+
+        private void ValidarEstadio(Estadio obj) {
+            foreach (Estadio est in Estadio.ListarEstadios()) {
+                if (obj.Nome.Equals(est.Nome)) {
+                    throw new Exception("Estádio já existe, verifique");
+                }
+            }
         }
     }
 }

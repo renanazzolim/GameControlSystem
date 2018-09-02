@@ -9,10 +9,21 @@ using System.Threading.Tasks;
 namespace Controller {
     public class EnderecoController {
 
-        public void Salvar(Endereco end) {
-            Contexto contexto = new Contexto();
-            contexto.Enderecos.Add(end);
-            contexto.SaveChanges();
+        public void SalvarEndereco(Endereco obj) {
+            try {
+                ValidarEndereco(obj);
+                Endereco.Salvar(obj);             
+            } catch (Exception exp) {
+                throw new Exception(exp.Message);
+            }
+        }
+
+        private void ValidarEndereco(Endereco obj) {
+            foreach(Endereco end in Endereco.ListarEnderecos()) {
+                if ((obj.Logradouro.Equals(end.Logradouro)) && (obj.Numero.Equals(end.Numero)) && (obj.Bairro.Equals(end.Bairro))) {
+                    throw new Exception("Endereço já existe, verifique");
+                }
+            }
         }
 
     }

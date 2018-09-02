@@ -27,5 +27,10 @@ namespace View.Telas {
             frmCadastrarCampeonato frm = new frmCadastrarCampeonato();
             frm.Show();
         }
+
+        private void btnCriarTime_Click(object sender, RoutedEventArgs e) {
+            frmCadastrarTime frm = new frmCadastrarTime();
+            frm.Show();
+        }
     }
 }

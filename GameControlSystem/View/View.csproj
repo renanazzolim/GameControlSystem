@@ -70,6 +70,15 @@
     <Compile Include="Forms\frmCadastrarCampeonato.xaml.cs">
       <DependentUpon>frmCadastrarCampeonato.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCadastrarTime.xaml.cs">
+      <DependentUpon>frmCadastrarTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditarCampeonato.xaml.cs">
+      <DependentUpon>frmEditarCampeonato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExcluirCampeonato.xaml.cs">
+      <DependentUpon>frmExcluirCampeonato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\scnCampeonato.xaml.cs">
       <DependentUpon>scnCampeonato.xaml</DependentUpon>
     </Compile>
@@ -89,6 +98,18 @@
       <DependentUpon>scnTime.xaml</DependentUpon>
     </Compile>
     <Page Include="Forms\frmCadastrarCampeonato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\frmCadastrarTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\frmEditarCampeonato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\frmExcluirCampeonato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

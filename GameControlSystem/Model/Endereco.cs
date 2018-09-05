@@ -33,6 +33,14 @@ namespace Model {
             return contexto.Enderecos.ToList();
         }
 
+        public static void Remove(int id) {
+            Contexto contexto = new Contexto();
+            //Endereco endereco = (Endereco)contexto.Enderecos.Where(e => e.EnderecoId == id).First();
+            contexto.Enderecos.Remove((Endereco)contexto.Enderecos.Where(e => e.EnderecoId == id).First());
+            //contexto.Entry(endereco).State = System.Data.Entity.EntityState.Deleted;
+            contexto.SaveChanges();
+        }
+
     }
 
 }

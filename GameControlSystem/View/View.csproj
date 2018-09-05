@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>media.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -97,6 +100,7 @@
     <Compile Include="Telas\scnTime.xaml.cs">
       <DependentUpon>scnTime.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util\Utils.cs" />
     <Page Include="Forms\frmCadastrarCampeonato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,7 +191,9 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="media.ico" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\speed-play-soccer.jpg" />
   </ItemGroup>

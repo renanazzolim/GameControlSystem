@@ -41,5 +41,16 @@ namespace Model {
             return contexto.Times.ToList();
         }
 
+        public static Time Find(int id) {
+            Contexto contexto = new Contexto();
+            return (Time)contexto.Times.Where(t => t.TimeId == id).First();
+        }
+
+        public static void Remove(int id) {
+            Contexto contexto = new Contexto();
+            contexto.Times.Remove((Time)contexto.Times.Where(t => t.TimeId == id).First());
+            contexto.SaveChanges();
+        }
+
     }
 }

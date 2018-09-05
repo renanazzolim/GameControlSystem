@@ -18,6 +18,23 @@ namespace Controller {
             }
         }
 
+        public IList<Time> ListarTimes() {
+            return Time.ListarTimes();
+        }
+
+        public void DeletarTime(Time obj) {
+            try {
+                Time time = Time.Find(obj.TimeId);
+                if (time != null) {
+                    Time.Remove(time.TimeId);
+                } else {
+                    throw new ArgumentNullException("Impossível deletar time com ID inexistente.");
+                }
+            } catch (Exception exp) {
+                throw exp;
+            }
+        }
+
         private void ValidarTime(Time obj) {
             foreach (Time time in Time.ListarTimes()) {
                 if (obj.Nome.Equals(time.Nome)) {
@@ -25,5 +42,6 @@ namespace Controller {
                 }
             }
         }
+
     }
 }

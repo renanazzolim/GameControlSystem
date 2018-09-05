@@ -30,6 +30,15 @@ namespace Model {
             Contexto contexto = new Contexto();
             return contexto.Estadios.ToList();
         }
+
+        public static void Remove(int id) {
+            Contexto contexto = new Contexto();
+            Estadio estadio = (Estadio)contexto.Estadios.Where(e => e.EstadioId == id).First();
+            contexto.Estadios.Remove(estadio);
+            contexto.Entry(estadio).State = System.Data.Entity.EntityState.Deleted;
+            contexto.SaveChanges();
+        }
+
     }
 
 }

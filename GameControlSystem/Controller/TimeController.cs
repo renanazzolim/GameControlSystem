@@ -26,7 +26,9 @@ namespace Controller {
             try {
                 Time time = Time.Find(obj.TimeId);
                 if (time != null) {
-                    Time.Remove(time.TimeId);
+                    Endereco.Remove(time._Estadio.EnderecoId);
+                    //Estadio.Remove(time.EstadioId);
+                    //Time.Remove(time.TimeId);
                 } else {
                     throw new ArgumentNullException("Impossível deletar time com ID inexistente.");
                 }

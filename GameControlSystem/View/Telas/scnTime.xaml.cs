@@ -37,7 +37,9 @@ namespace View.Telas {
 
         private void CarregarTimes() {
             IList<Time> lista = timeController.ListarTimes();
-            dbGridTimes.ItemsSource = lista;
+            if (lista != null) {
+                dbGridTimes.ItemsSource = lista;
+            }
         }
 
         private void btnExcluirTime_Click(object sender, RoutedEventArgs e) {

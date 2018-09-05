@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5D921CE-4AB7-4F87-B111-15D70937E0BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>media.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\frmCadastrarCampeonato.xaml.cs">
+      <DependentUpon>frmCadastrarCampeonato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadastrarTime.xaml.cs">
+      <DependentUpon>frmCadastrarTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditarCampeonato.xaml.cs">
+      <DependentUpon>frmEditarCampeonato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExcluirCampeonato.xaml.cs">
+      <DependentUpon>frmExcluirCampeonato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnCampeonato.xaml.cs">
+      <DependentUpon>scnCampeonato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnInicio.xaml.cs">
+      <DependentUpon>scnInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnJogador.xaml.cs">
+      <DependentUpon>scnJogador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnPartida.xaml.cs">
+      <DependentUpon>scnPartida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnRelatorios.xaml.cs">
+      <DependentUpon>scnRelatorios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\scnTime.xaml.cs">
+      <DependentUpon>scnTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{AAD88C6A-F15B-41A0-AB8E-98A71BE25F61}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{C4ECC3E6-C1EC-40ED-955A-3C82B00DB074}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ReferencePath Include="C:\projetos\GameControlSystem\GameControlSystem\Controller\bin\Debug\Controller.dll" />
+    <ReferencePath Include="C:\projetos\GameControlSystem\GameControlSystem\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" />
+    <ReferencePath Include="C:\projetos\GameControlSystem\GameControlSystem\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <ReferencePath Include="C:\projetos\GameControlSystem\GameControlSystem\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll" />
+    <ReferencePath Include="C:\projetos\GameControlSystem\GameControlSystem\packages\MaterialDesignThemes.2.4.1.1101\lib\net45\MaterialDesignThemes.Wpf.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\projetos\GameControlSystem\GameControlSystem\Model\bin\Debug\Model.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\WindowsBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Forms\frmCadastrarCampeonato.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Forms\frmCadastrarTime.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Forms\frmEditarCampeonato.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Forms\frmExcluirCampeonato.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\scnCampeonato.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\scnInicio.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\scnJogador.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\scnPartida.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\scnRelatorios.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\Telas\scnTime.g.cs" />
+    <Compile Include="C:\projetos\GameControlSystem\GameControlSystem\View\obj\Debug\App.g.cs" />
+  </ItemGroup>
+</Project>

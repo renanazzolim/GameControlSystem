@@ -29,7 +29,7 @@ namespace Model {
             this.Derrotas = 0;
             this.Empates = 0;
         }
-
+        
         public static void Salvar(Time obj) {
             Contexto contexto = new Contexto();
             contexto.Times.Add(obj);
@@ -41,14 +41,23 @@ namespace Model {
             return contexto.Times.ToList();
         }
 
-        public static Time Find(int id) {
+        public static Time GetById(int id) {
             Contexto contexto = new Contexto();
-            return (Time)contexto.Times.Where(t => t.TimeId == id).First();
+            return contexto.Times.Find(id);
         }
 
         public static void Remove(int id) {
             Contexto contexto = new Contexto();
             contexto.Times.Remove((Time)contexto.Times.Where(t => t.TimeId == id).First());
+            contexto.Entry((Time)contexto.Times.Where(t => t.TimeId == id).First()).State = System.Data.Entity.EntityState.Deleted;
+            contexto.SaveChanges();
+        }
+
+        public static void Atualizar(int id, String nome) {
+            Contexto contexto = new Contexto();
+            Time time = contexto.Times.Find(id);
+            time.Nome = nome;
+            contexto.Entry(time).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
         }
 

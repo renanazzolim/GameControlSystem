@@ -7,3 +7,21 @@ Objetivo deste projeto é criar um sistema para controle de jogos (campeonatos),
 ```
 Apenas clonar o projeto
 ```
+
+- time (gerenciamento) = concluído
+- jogador (gerenciamento) = a fazer
+** campeonato
+- (gerenciamento) => concluir (validar com diagrama)
+
+
+** partida
+- criar front
+- adicionar partida/time
+- no menu => jogar (?) selecionando a partida já definida
+///
+- Gol depende de partida, criar funcão e gerenciamento na model do gol
+
+
+** relatórios
+- criar front
+- criar tabelas com as consultas

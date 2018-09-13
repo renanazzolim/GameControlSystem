@@ -56,7 +56,10 @@ namespace View.Telas {
         }
 
         private void btnEditarTime_Click(object sender, RoutedEventArgs e) {
-            //
+            Time time = ((FrameworkElement)sender).DataContext as Time;
+            frmEditarTime frm = new frmEditarTime(time);
+            frm.Closed += (s, args) => CarregarTimes();
+            frm.Show();
         }
     }
 }

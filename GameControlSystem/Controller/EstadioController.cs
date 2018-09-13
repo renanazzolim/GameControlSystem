@@ -14,8 +14,22 @@ namespace Controller {
                 ValidarEstadio(obj);
                 Estadio.Salvar(obj);
             } catch (Exception exp) {
-                throw new Exception(exp.Message);
+                throw exp;
             }            
+        }
+
+        public void AtualizarEstadio(int id, Estadio obj) {
+            try {
+                Estadio estAntigo = Estadio.GetById(id);
+                if (estAntigo != null) {
+                    Estadio.Atualizar(id, obj.Nome);
+                } else {
+                    throw new Exception("Id estádio não localizado para atualização");
+                }
+
+            } catch (Exception exp) {
+                throw exp;
+            }
         }
 
         private void ValidarEstadio(Estadio obj) {

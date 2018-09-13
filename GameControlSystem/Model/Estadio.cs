@@ -39,6 +39,19 @@ namespace Model {
             contexto.SaveChanges();
         }
 
+        public static Estadio GetById(int id) {
+            Contexto contexto = new Contexto();
+            return contexto.Estadios.Find(id);
+        }
+
+        public static void Atualizar(int id, String nome) {
+            Contexto contexto = new Contexto();
+            Estadio estadio = contexto.Estadios.Find(id);
+            estadio.Nome = nome;
+            contexto.Entry(estadio).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
+        }
+
     }
 
 }

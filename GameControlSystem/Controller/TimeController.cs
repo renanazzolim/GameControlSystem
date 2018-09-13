@@ -24,13 +24,26 @@ namespace Controller {
 
         public void DeletarTime(Time obj) {
             try {
-                Time time = Time.Find(obj.TimeId);
+                Time time = Time.GetById(obj.TimeId);
                 if (time != null) {
                     Endereco.Remove(time._Estadio.EnderecoId);
                     //Estadio.Remove(time.EstadioId);
                     //Time.Remove(time.TimeId);
                 } else {
                     throw new ArgumentNullException("Impossível deletar time com ID inexistente.");
+                }
+            } catch (Exception exp) {
+                throw exp;
+            }
+        }
+
+        public void AtualizarTime(int id, Time obj) {
+            try {
+                Time timeAntigo = Time.GetById(id);
+                if (timeAntigo != null) {
+                    Time.Atualizar(id, obj.Nome);
+                } else {
+                    throw new Exception("Id time não localizado para atualização");
                 }
             } catch (Exception exp) {
                 throw exp;

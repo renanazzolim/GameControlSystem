@@ -41,7 +41,7 @@ namespace Model {
             return contexto.Times.ToList();
         }
 
-        public static Time Find(int id) {
+        public static Time GetById(int id) {
             Contexto contexto = new Contexto();
             return contexto.Times.Find(id);
         }
@@ -50,6 +50,14 @@ namespace Model {
             Contexto contexto = new Contexto();
             contexto.Times.Remove((Time)contexto.Times.Where(t => t.TimeId == id).First());
             contexto.Entry((Time)contexto.Times.Where(t => t.TimeId == id).First()).State = System.Data.Entity.EntityState.Deleted;
+            contexto.SaveChanges();
+        }
+
+        public static void Atualizar(int id, String nome) {
+            Contexto contexto = new Contexto();
+            Time time = contexto.Times.Find(id);
+            time.Nome = nome;
+            contexto.Entry(time).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
         }
 

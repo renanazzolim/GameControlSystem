@@ -79,6 +79,9 @@
     <Compile Include="Forms\frmEditarCampeonato.xaml.cs">
       <DependentUpon>frmEditarCampeonato.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEditarTime.xaml.cs">
+      <DependentUpon>frmEditarTime.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmExcluirCampeonato.xaml.cs">
       <DependentUpon>frmExcluirCampeonato.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\frmEditarCampeonato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\frmEditarTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

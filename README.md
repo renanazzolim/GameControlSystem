@@ -11,7 +11,8 @@ Apenas clonar o projeto
 - time (gerenciamento) = concluído
 - jogador (gerenciamento) = a fazer
 ** campeonato
-- (gerenciamento) => concluir (validar com diagrama)
+- (gerenciamento) => concluído
+- ajustar tela das partidas de acordo com o duplo clique no campeonato
 
 
 ** partida

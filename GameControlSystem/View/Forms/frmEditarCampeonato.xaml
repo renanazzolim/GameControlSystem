@@ -4,10 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View.Forms"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Editar Campeonato" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid Background="LightGray">
-        <DataGrid HorizontalAlignment="Left" Height="100" Margin="304,74,0,0" VerticalAlignment="Top" Width="100"/>
-
+        Title="frmEditarCampeonato" Height="220" Width="250" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightGray" MouseDown="Grid_MouseDown" Margin="0,0,0,-66">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="ButtonFechar" VerticalAlignment="Top" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="#FFC73B3B" Click="ButtonFechar_Click">
+                <materialDesign:PackIcon Kind="Power" Width="25" Height="25"/>
+            </Button>
+        </StackPanel>
+        <Label Content="Editar Campeonato" HorizontalAlignment="Left" Margin="59,10,0,0" VerticalAlignment="Top" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" Width="123"/>
+        <Label x:Name="lblTitulo" Content="Ano do campeonato" HorizontalAlignment="Left" Margin="47,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.474,-0.231" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+        <TextBox x:Name="txtAno" HorizontalAlignment="Left" Height="23" Margin="59,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="White" CaretBrush="#FF6E7C87" SelectionBrush="#FF2B7615"/>
+        <Button x:Name="btnConfirma" Content="Confirmar" HorizontalAlignment="Left" Margin="69,193,0,0" VerticalAlignment="Top" Width="101" Background="#FF118D3E" Click="btnConfirma_Click" BorderBrush="#FF1B8D44"/>
+        <TextBox x:Name="txtTituloCamp" HorizontalAlignment="Left" Height="23" Margin="59,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White"/>
+        <Label Content="Título do Campeonato" HorizontalAlignment="Left" Margin="47,124,0,0" VerticalAlignment="Top" Width="168" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" RenderTransformOrigin="0.706,0.319"/>
     </Grid>
 </Window>

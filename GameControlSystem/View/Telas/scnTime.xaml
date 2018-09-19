@@ -16,7 +16,7 @@
                 <DataGridTextColumn Binding="{Binding _Estadio.Nome}" Header="Estádio" MaxWidth="130"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding _Estadio._Endereco.Logradouro}" Header="Logradouro" MaxWidth="130"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding _Estadio._Endereco.Numero}" Header="Numero"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding _Estadio._Endereco.Complemento}" Header="Complemento" MaxWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding _Estadio._Endereco.Complemento}" Header="Complemento" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding _Estadio._Endereco.Bairro}" Header="Bairro" MaxWidth="100"></DataGridTextColumn>
 
                 <DataGridTemplateColumn>

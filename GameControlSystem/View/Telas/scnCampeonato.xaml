@@ -7,10 +7,32 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" Width="500">
     <Grid>
-        <Button x:Name="btnListarCampeonatos" Content="Listar" HorizontalAlignment="Left" Margin="494,-143,-80,0" VerticalAlignment="Top" Width="86" Click="btnListarCampeonatos_Click"/>
-        <Label x:Name="lblTitulo" Content="Campeonatos" HorizontalAlignment="Left" Margin="121,-234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.461,-0.173" Width="161" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
-        <Button x:Name="btnEditarCampeonato" Content="Editar" HorizontalAlignment="Left" Margin="494,-92,-80,0" VerticalAlignment="Top" Width="86" Height="32" Click="btnEditarCampeonato_Click"/>
-        <Button x:Name="btnExcluirCampeonato" Content="Excluir" HorizontalAlignment="Left" Margin="494,-41,-80,0" VerticalAlignment="Top" Width="86" Click="btnExcluirCampeonato_Click"/>
+        <Label x:Name="lblTitulo" Content="Campeonatos" HorizontalAlignment="Left" Margin="171,-30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.461,-0.173" Width="160" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
+        <Button x:Name="btnNovoCampeonato" Content="Novo" HorizontalAlignment="Left" Margin="-120,14,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="btnNovoCampeonato_Click"/>
+        <DataGrid x:Name="dbGridCampeonatos" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="387" Margin="-120,60,-118,-47" VerticalAlignment="Top" Width="738" MouseDoubleClick="dbGridCampeonatos_MouseDoubleClick">
+            <DataGrid.Columns >
+
+                <DataGridTextColumn Binding="{Binding AnoCampeonato}" Header="Ano" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding TituloCampeonato}" Header="Título" Width="430"></DataGridTextColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnExcluirCampeonato_Click" Name="btnExcluirCampeonato">Excluir</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnEditarCampeonato_Click" Name="btnEditarCampeonato">Editar</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </UserControl>

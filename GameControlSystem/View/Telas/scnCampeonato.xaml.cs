@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,21 +21,58 @@ namespace View.Telas {
     /// Interação lógica para scnCampeonato.xam
     /// </summary>
     public partial class scnCampeonato : UserControl {
+
+        CampeonatoController campController = new CampeonatoController();
+
         public scnCampeonato() {
             InitializeComponent();
+            CarregarCampeonatos();
         }
 
-        private void btnListarCampeonatos_Click(object sender, RoutedEventArgs e) {
-
-        }
-
-        private void btnEditarCampeonato_Click(object sender, RoutedEventArgs e) {
-            frmEditarCampeonato frm = new frmEditarCampeonato();
+        private void btnNovoCampeonato_Click(object sender, RoutedEventArgs e) {
+            frmCadastrarCampeonato frm = new frmCadastrarCampeonato();
+            frm.Closed += (s, args) => CarregarCampeonatos();
             frm.Show();
         }
 
+        private void btnEditarCampeonato_Click(object sender, RoutedEventArgs e) {
+            try {
+                Campeonato camp = ((FrameworkElement)sender).DataContext as Campeonato;
+                frmEditarCampeonato frm = new frmEditarCampeonato(camp);
+                frm.Closed += (s, args) => CarregarCampeonatos();
+                frm.Show();
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
+            }
+        }
+
         private void btnExcluirCampeonato_Click(object sender, RoutedEventArgs e) {
-            frmExcluirCampeonato frm = new frmExcluirCampeonato();
+            Campeonato campeonato = ((FrameworkElement)sender).DataContext as Campeonato;
+            try {
+                if (Util.Utils.OnConfirma("Deseja mesmo excluir?", "Excluir")) {
+                    campController.ExcluirCampeonato(campeonato);
+                    Util.Utils.OnInforma("Campeonato excluído com sucesso!");
+                    CarregarCampeonatos();
+                }
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
+            }
+        }
+
+        private void CarregarCampeonatos() {
+            try {
+                IList<Campeonato> lista = campController.ListarCampeonatos();
+                if (lista != null) {
+                    dbGridCampeonatos.ItemsSource = lista;
+                }
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
+            }
+        }
+
+        private void dbGridCampeonatos_MouseDoubleClick(object sender, MouseButtonEventArgs e) {
+            Campeonato campeonato = ((FrameworkElement)sender).DataContext as Campeonato;
+            frmJogosPorCampeonato frm = new frmJogosPorCampeonato();
             frm.Show();
         }
     }

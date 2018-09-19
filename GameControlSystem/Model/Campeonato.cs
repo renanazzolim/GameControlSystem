@@ -29,5 +29,27 @@ namespace Model {
             return contexto.Campeonatos.ToList();
         }
 
+        public static Campeonato GetById(int id) {
+            Contexto contexto = new Contexto();
+            return contexto.Campeonatos.Find(id);
+        }
+
+        public static void Remove(int id) {
+            Contexto contexto = new Contexto();
+            contexto.Campeonatos.Remove((Campeonato)contexto.Campeonatos.Where(c => c.CampeonatoId == id).First());
+            contexto.Entry((Campeonato)contexto.Campeonatos.Where(c => c.CampeonatoId == id).First()).State = System.Data.Entity.EntityState.Deleted;
+            contexto.SaveChanges();
+        }
+
+        public static void Atualizar(int id, int ano, String titulo) {
+            Contexto contexto = new Contexto();
+            Campeonato camp = contexto.Campeonatos.Find(id);
+            camp.AnoCampeonato = ano;
+            camp.TituloCampeonato = titulo;
+
+            contexto.Entry(camp).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
+        }
+
     }
 }

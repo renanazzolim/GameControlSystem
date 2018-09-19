@@ -85,6 +85,9 @@
     <Compile Include="Forms\frmExcluirCampeonato.xaml.cs">
       <DependentUpon>frmExcluirCampeonato.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmJogosPorCampeonato.xaml.cs">
+      <DependentUpon>frmJogosPorCampeonato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\scnCampeonato.xaml.cs">
       <DependentUpon>scnCampeonato.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\frmExcluirCampeonato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\frmJogosPorCampeonato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

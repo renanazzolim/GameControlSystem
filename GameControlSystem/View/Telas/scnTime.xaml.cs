@@ -30,15 +30,23 @@ namespace View.Telas {
         }
 
         private void btnNovoTime_Click(object sender, RoutedEventArgs e) {
-            frmCadastrarTime frm = new frmCadastrarTime();
-            frm.Closed += (s, args) => CarregarTimes();
-            frm.Show();
+            try {
+                frmCadastrarTime frm = new frmCadastrarTime();
+                frm.Closed += (s, args) => CarregarTimes();
+                frm.Show();
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
+            }
         }
 
         private void CarregarTimes() {
-            IList<Time> lista = timeController.ListarTimes();
-            if (lista != null) {
-                dbGridTimes.ItemsSource = lista;
+            try {
+                IList<Time> lista = timeController.ListarTimes();
+                if (lista != null) {
+                    dbGridTimes.ItemsSource = lista;
+                }
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
             }
         }
 
@@ -56,10 +64,14 @@ namespace View.Telas {
         }
 
         private void btnEditarTime_Click(object sender, RoutedEventArgs e) {
-            Time time = ((FrameworkElement)sender).DataContext as Time;
-            frmEditarTime frm = new frmEditarTime(time);
-            frm.Closed += (s, args) => CarregarTimes();
-            frm.Show();
+            try {
+                Time time = ((FrameworkElement)sender).DataContext as Time;
+                frmEditarTime frm = new frmEditarTime(time);
+                frm.Closed += (s, args) => CarregarTimes();
+                frm.Show();
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
+            }
         }
     }
 }

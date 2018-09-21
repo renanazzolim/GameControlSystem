@@ -54,6 +54,8 @@ namespace View.Forms {
                 throw new Exception("Caracter inválido para o campo Ano");
             } else if (String.IsNullOrEmpty(Ano)) {
                 throw new Exception("Ano não pode estar vazio");
+            } else if (Ano.Equals("")) {
+                throw new Exception("Ano não pode estar vazio");
             } else if (Convert.ToInt32(Ano) > 2030) {
                 throw new Exception("Ano inválido, maior que 2030");
             } else if (Convert.ToInt32(Ano) < 1999) {

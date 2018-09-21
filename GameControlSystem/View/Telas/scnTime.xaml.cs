@@ -73,5 +73,9 @@ namespace View.Telas {
                 MessageBox.Show(exp.Message);
             }
         }
+
+        private void dbGridTimes_MouseDoubleClick(object sender, MouseButtonEventArgs e) {
+            Time time = ((FrameworkElement)sender).DataContext as Time;
+        }
     }
 }

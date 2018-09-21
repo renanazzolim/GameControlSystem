@@ -9,7 +9,7 @@
     <Grid>
         <Label x:Name="lblTituloPrincipal" Content="Times" HorizontalAlignment="Left" Margin="306,-7,0,0" VerticalAlignment="Top" Width="100" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
         <Button x:Name="btnNovoTime" Content="Novo" HorizontalAlignment="Left" Margin="-2,36,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="btnNovoTime_Click"/>
-        <DataGrid x:Name="dbGridTimes" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="390" Margin="-2,83,0,-23" VerticalAlignment="Top" Width="740">
+        <DataGrid x:Name="dbGridTimes" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="390" Margin="-2,83,0,-23" VerticalAlignment="Top" Width="740" MouseDoubleClick="dbGridTimes_MouseDoubleClick">
             <DataGrid.Columns>
 
                 <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" MaxWidth="150"></DataGridTextColumn>

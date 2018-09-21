@@ -7,6 +7,37 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="-7,36,0,0" VerticalAlignment="Top" Width="76" Click="btnNovo_Click"/>
+        <Label Content="Jogadores" HorizontalAlignment="Left" Margin="323,-41,0,0" VerticalAlignment="Top" Height="41" Width="122" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
+
+        <DataGrid x:Name="dbGridJogadores" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="387" Margin="-8,82,0,-19" VerticalAlignment="Top" Width="738">
+            <DataGrid.Columns >
+
+                <DataGridTextColumn Binding="{Binding _Time.Nome}" Header="Time" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Nome}" Header="Nome"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Nascimento}" Header="Nascimento"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Genero}" Header="Gênero"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Altura}" Header="Altura"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Binding="{Binding Capitao}" Header="Capitao" IsReadOnly="True"></DataGridCheckBoxColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnExcluirJogador_Click" Name="btnExcluirJogador">Excluir</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnEditarJogador_Click" Name="btnEditarJogador">Editar</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </UserControl>

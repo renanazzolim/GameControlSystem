@@ -9,7 +9,11 @@ Apenas clonar o projeto
 ```
 
 - time (gerenciamento) = concluído
-- jogador (gerenciamento) = a fazer
+
+** jogador
+- (gerenciamento) = concluído
+	. ver a questão das ordenações
+
 ** campeonato
 - (gerenciamento) => concluído
 - ajustar tela das partidas de acordo com o duplo clique no campeonato

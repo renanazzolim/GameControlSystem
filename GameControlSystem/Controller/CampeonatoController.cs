@@ -24,6 +24,34 @@ namespace Controller {
             }
         }
 
+        public IList<Campeonato> ListarCampeonatos() {
+            return Campeonato.ListarCampeonatos();
+        }
+
+        public void ExcluirCampeonato(Campeonato obj) {
+            try {
+                Campeonato camp = Campeonato.GetById(obj.CampeonatoId);
+                if (camp != null) {
+                    Campeonato.Remove(camp.CampeonatoId);
+                }
+            } catch (Exception exp) {
+                throw exp;
+            }
+        }
+
+        public void AtualizarCampeonato(int id, Campeonato camp) {
+            try {
+                Campeonato campAntigo = Campeonato.GetById(id);
+                if (campAntigo != null) {
+                    Campeonato.Atualizar(id, camp.AnoCampeonato, camp.TituloCampeonato);
+                } else {
+                    throw new Exception("Id Campeonato não localizado para atualização");
+                }
+            } catch (Exception exp) {
+                throw exp;
+            }
+        }
+
         private static Boolean IsCampeonatoValido(Campeonato obj) {
             Boolean result = true;
             foreach (Campeonato campeonato in Campeonato.ListarCampeonatos()) {

@@ -14,15 +14,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace View.Forms
-{
+namespace View.Forms {
     /// <summary>
     /// Lógica interna para frmCadastrarCampeonato.xaml
     /// </summary>
-    public partial class frmCadastrarCampeonato : Window
-    {
-        public frmCadastrarCampeonato()
-        {
+    public partial class frmCadastrarCampeonato : Window {
+        public frmCadastrarCampeonato() {
             InitializeComponent();
         }
 
@@ -36,7 +33,7 @@ namespace View.Forms
 
         private void btnCriar_Click(object sender, RoutedEventArgs e) {
             try {
-
+                ValidarCampos(txtAno.Text, txtTituloCamp.Text);
                 Campeonato campeonato = new Campeonato();
                 campeonato.AnoCampeonato = Convert.ToInt32(txtAno.Text);
                 campeonato.TituloCampeonato = txtTituloCamp.Text;
@@ -48,9 +45,24 @@ namespace View.Forms
             } catch (Exception exp) {
                 MessageBox.Show(exp.Message);
             }
-            
+
         }
 
-        
+        private void ValidarCampos(String Ano, String titulo) {
+
+            if (!Char.IsDigit(Ano, 0)) {
+                throw new Exception("Caracter inválido para o campo Ano");
+            } else if (String.IsNullOrEmpty(Ano)) {
+                throw new Exception("Ano não pode estar vazio");
+            } else if (Ano.Equals("")) {
+                throw new Exception("Ano não pode estar vazio");
+            } else if (Convert.ToInt32(Ano) > 2030) {
+                throw new Exception("Ano inválido, maior que 2030");
+            } else if (Convert.ToInt32(Ano) < 1999) {
+                throw new Exception("Ano inválido, menor que 1999");
+            } else if (String.IsNullOrEmpty(titulo)) {
+                throw new Exception("Título não pode estar vazio");
+            }
+        }
     }
 }

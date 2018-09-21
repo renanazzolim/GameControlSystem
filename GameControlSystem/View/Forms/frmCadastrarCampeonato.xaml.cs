@@ -14,15 +14,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace View.Forms
-{
+namespace View.Forms {
     /// <summary>
     /// Lógica interna para frmCadastrarCampeonato.xaml
     /// </summary>
-    public partial class frmCadastrarCampeonato : Window
-    {
-        public frmCadastrarCampeonato()
-        {
+    public partial class frmCadastrarCampeonato : Window {
+        public frmCadastrarCampeonato() {
             InitializeComponent();
         }
 
@@ -48,7 +45,7 @@ namespace View.Forms
             } catch (Exception exp) {
                 MessageBox.Show(exp.Message);
             }
-            
+
         }
 
         private void ValidarCampos(String Ano, String titulo) {
@@ -56,6 +53,8 @@ namespace View.Forms
             if (!Char.IsDigit(Ano, 0)) {
                 throw new Exception("Caracter inválido para o campo Ano");
             } else if (String.IsNullOrEmpty(Ano)) {
+                throw new Exception("Ano não pode estar vazio");
+            } else if (Ano.Equals("")) {
                 throw new Exception("Ano não pode estar vazio");
             } else if (Convert.ToInt32(Ano) > 2030) {
                 throw new Exception("Ano inválido, maior que 2030");
@@ -65,7 +64,5 @@ namespace View.Forms
                 throw new Exception("Título não pode estar vazio");
             }
         }
-
-
     }
 }

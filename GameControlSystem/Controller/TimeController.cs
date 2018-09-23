@@ -50,6 +50,19 @@ namespace Controller {
             }
         }
 
+        public Time GetTimeById(int id) {
+            Time obj = new Time();
+            try {
+                obj = Time.GetById(id);
+                if (obj == null) {
+                    throw new Exception("Time não encontrado ao tentar procurar pelo ID: " + id);
+                }
+            } catch (Exception exp) {
+                throw exp;
+            }
+            return obj;
+        }
+
         private void ValidarTime(Time obj) {
             foreach (Time time in Time.ListarTimes()) {
                 if (obj.Nome.Equals(time.Nome)) {

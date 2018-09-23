@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,7 +15,7 @@ namespace Model {
         public int PartidaId { get; set; }
 
         [Required]
-        public DateTime Data { get; set; }
+        public String Data { get; set; }
 
         [Required]
         public int EstadioId { get; set; }
@@ -28,9 +29,22 @@ namespace Model {
         [Required]
         public int CampeonatoId { get; set; }
 
-        public virtual Time _Time { get; set; }
-
         public virtual Campeonato _Campeonato { get; set; }
+
+        public virtual IList<Time> _Time { get; set; }
+
+        public static void Salvar(Partida obj) {
+            Contexto contexto = new Contexto();
+            contexto.Partidas.Add(obj);
+            contexto.SaveChanges();
+        }
+
+        public static IList<Partida> GetPartidasByCampeonato(int id) {
+            Contexto contexto = new Contexto();
+            var partidas = contexto.Partidas.ToList();
+            var retorno = from p in partidas where p.CampeonatoId == id select p;
+            return retorno.ToList();
+        }
 
     }
 }

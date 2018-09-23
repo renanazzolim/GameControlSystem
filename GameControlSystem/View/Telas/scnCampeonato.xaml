@@ -9,7 +9,7 @@
     <Grid>
         <Label x:Name="lblTitulo" Content="Campeonatos" HorizontalAlignment="Left" Margin="171,-30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.461,-0.173" Width="160" FontSize="24" FontFamily="Champagne &amp; Limousines"/>
         <Button x:Name="btnNovoCampeonato" Content="Novo" HorizontalAlignment="Left" Margin="-121,11,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="btnNovoCampeonato_Click"/>
-        <DataGrid x:Name="dbGridCampeonatos" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="387" Margin="-120,60,-118,-47" VerticalAlignment="Top" Width="738" MouseDoubleClick="dbGridCampeonatos_MouseDoubleClick">
+        <DataGrid x:Name="dbGridCampeonatos" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="387" Margin="-120,60,-118,-47" VerticalAlignment="Top" Width="738">
             <DataGrid.Columns >
 
                 <DataGridTextColumn Binding="{Binding AnoCampeonato}" Header="Ano" Width="100"></DataGridTextColumn>
@@ -27,6 +27,14 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="btnEditarCampeonato_Click" Name="btnEditarCampeonato">Editar</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnPartidas_Click" x:Name="btnPartidas" Content="Partidas"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

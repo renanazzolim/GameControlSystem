@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View.Forms"
         mc:Ignorable="d"
-        Title="frmJogosPorCampeonato" Height="450" Width="800">
-    <Grid>
-        
+        Title="Partidas por campeonato" Height="450" Width="800" Background="White">
+    <Grid Background="LightGray">
+        <Label x:Name="lblTitulo" HorizontalAlignment="Center" Margin="128,10,124,0" VerticalAlignment="Top" Width="540" FontSize="18" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" Height="47"/>
+        <DataGrid x:Name="dbGridPartidas" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="334" Margin="10,75,0,0" VerticalAlignment="Top" Width="772">
+            <DataGrid.Columns >
+
+                <DataGridTextColumn Binding="{Binding PartidaId}" Header="Partida"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Data}" Header="Data"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding AnfitriaoId}" Header="Anfitrião"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding VisitanteId}" Header="Visitante"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding EstadioId}" Header="Estádio"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding _Campeonato.TituloCampeonato}" Header="Campeonato"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

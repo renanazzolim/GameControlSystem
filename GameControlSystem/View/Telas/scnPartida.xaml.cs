@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using View.Forms;
 
 namespace View.Telas {
     /// <summary>
@@ -20,6 +21,11 @@ namespace View.Telas {
     public partial class scnPartida : UserControl {
         public scnPartida() {
             InitializeComponent();
+        }
+
+        private void btnCriar_Click(object sender, RoutedEventArgs e) {
+            frmCriarPartidas frm = new frmCriarPartidas();
+            frm.Show();
         }
     }
 }

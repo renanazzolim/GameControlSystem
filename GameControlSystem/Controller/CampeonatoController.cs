@@ -16,7 +16,7 @@ namespace Controller {
                 if (!IsCampeonatoValido(obj)) {
                     throw new Exception("Campeonato já existe, verifique!");
                 }
-
+                obj.TituloCampeonato = obj.AnoCampeonato + " - " + obj.TituloCampeonato;
                 Campeonato.Salvar(obj);
                 
             } catch (Exception exp) {

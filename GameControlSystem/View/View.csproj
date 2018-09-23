@@ -79,6 +79,9 @@
     <Compile Include="Forms\frmCadastrarTime.xaml.cs">
       <DependentUpon>frmCadastrarTime.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCriarPartidas.xaml.cs">
+      <DependentUpon>frmCriarPartidas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEditarCampeonato.xaml.cs">
       <DependentUpon>frmEditarCampeonato.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\frmCadastrarTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\frmCriarPartidas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

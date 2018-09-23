@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +19,29 @@ namespace View.Forms {
     /// Lógica interna para frmJogosPorCampeonato.xaml
     /// </summary>
     public partial class frmJogosPorCampeonato : Window {
-        public frmJogosPorCampeonato() {
-            InitializeComponent();
+
+        PartidaController partController = new PartidaController();
+
+        public frmJogosPorCampeonato(Campeonato obj) {
+            try {
+                InitializeComponent();
+                CarregarPartidas(obj.CampeonatoId);
+                lblTitulo.Content = obj.TituloCampeonato;
+            } catch (Exception exp) {
+                MessageBox.Show(exp.Message);
+            }
         }
+
+        private void CarregarPartidas(int id) {
+            try {
+                IList<Partida> lista = partController.ListarPartidasPorCampeonato(id);
+                if (lista != null) {
+                    dbGridPartidas.ItemsSource = lista;
+                }
+            } catch (Exception exp) {
+                throw exp;
+            }
+        }
+
     }
 }

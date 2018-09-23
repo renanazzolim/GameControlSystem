@@ -70,9 +70,9 @@ namespace View.Telas {
             }
         }
 
-        private void dbGridCampeonatos_MouseDoubleClick(object sender, MouseButtonEventArgs e) {
+        private void btnPartidas_Click(object sender, RoutedEventArgs e) {
             Campeonato campeonato = ((FrameworkElement)sender).DataContext as Campeonato;
-            frmJogosPorCampeonato frm = new frmJogosPorCampeonato();
+            frmJogosPorCampeonato frm = new frmJogosPorCampeonato(campeonato);
             frm.Show();
         }
     }

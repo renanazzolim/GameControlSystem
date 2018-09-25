@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,20 @@ namespace Model {
             var partidas = contexto.Partidas.ToList();
             var retorno = from p in partidas where p.CampeonatoId == id select p;
             return retorno.ToList();
+
+            /*var partidas = contexto.Partidas.ToList();
+            var times = Time.ListarTimes();
+            var estadios = Estadio.ListarEstadios();
+            var campeonatos = Campeonato.ListarCampeonatos();
+            var retorno = from p in contexto.Partidas.ToList()
+                          join anf in Time.ListarTimes() on p.AnfitriaoId equals anf.TimeId
+                          join vis in Time.ListarTimes() on p.VisitanteId equals vis.TimeId
+                          join e in Estadio.ListarEstadios() on p.EstadioId equals e.EstadioId
+                          join c in Campeonato.ListarCampeonatos() on p.CampeonatoId equals c.CampeonatoId
+                          where (p.CampeonatoId == id)
+                          select new {Partida = p.PartidaId, Data = p.Data, Anfitriao = anf.Nome,
+                              Visitante = vis.Nome, Estadio = e.Nome, Titulo = c.TituloCampeonato };
+            return retorno.ToArray();*/
         }
 
     }
